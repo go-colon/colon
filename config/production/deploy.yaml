@@ -1,0 +1,11 @@
+host: 127.0.0.1
+user: colon
+password: 123abc
+rsa_key:
+timeout: 1000
+remote_path: "/home/go-colon/colon/"
+post_shell:
+  - "./colon serve restart"
+  - "pwd"
+goos: linux
+goarch: amd64
