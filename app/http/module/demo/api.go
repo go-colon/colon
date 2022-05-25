@@ -18,6 +18,8 @@ func Register(r *gin.Engine) error {
 	r.POST("/demo/demo_post", api.DemoPost)
 	r.GET("/demo/orm", api.DemoOrm)
 	r.GET("/demo/cache/redis", api.DemoRedis)
+
+	r.GET("/demo/hello", api.DemoHello)
 	return nil
 }
 
@@ -61,4 +63,15 @@ func (api *DemoApi) DemoPost(c *gin.Context) {
 		c.AbortWithError(500, err)
 	}
 	c.JSON(200, nil)
+}
+
+// DemoHello godoc
+// @Summary hello
+// @Description hello
+// @Produce  json
+// @Tags demo
+// @Success 200 array []UserDTO
+// @Router /demo/hello [get]
+func (api *DemoApi) DemoHello(c *gin.Context) {
+	c.JSON(200, "this is demo for hello")
 }

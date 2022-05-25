@@ -5,6 +5,6 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo "Asia/Shanghai" > /etc/timezone
 
 WORKDIR /opt/permission
-COPY permission-authserver /opt/permission/bin/
+COPY user /opt/user/bin/
 
-ENTRYPOINT ["/opt/permission/bin/permission-authserver"]
+ENTRYPOINT ["/opt/user/bin/user"]

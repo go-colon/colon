@@ -8,13 +8,14 @@
 package http
 
 import (
-	"github.com/go-colon/colon/app/http/controller/demo"
+	"github.com/go-colon/colon/app/http/module/demo"
 	"github.com/go-colon/colon/framework/gin"
 )
 
 func Routes(r *gin.Engine) {
 	r.Static("/dist/", "./dist/")
-	r.GET("/demo/demo", demo.Demo)
+	// 外层定义路由
+	r.GET("/hello", demo.NewDemoApi().DemoHello)
 }
 
 ```
