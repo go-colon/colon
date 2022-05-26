@@ -1,11 +1,11 @@
 package contract
 
 const (
-	// EnvProduction 代表生产环境
+	// EnvProduction 生产环境
 	EnvProduction = "production"
-	// EnvTesting 代表测试环境
+	// EnvTesting 测试环境
 	EnvTesting = "testing"
-	// EnvDevelopment 代表开发环境
+	// EnvDevelopment 开发环境
 	EnvDevelopment = "development"
 
 	// EnvKey 是环境变量服务字符串凭证

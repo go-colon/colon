@@ -15,6 +15,6 @@ type ServiceProvider interface {
 	IsDefer() bool
 	// Params params定义传递给NewInstance的参数，可以自定义多个，建议将container作为第一个参数
 	Params(Container) []interface{}
-	// Name 代表了这个服务提供者的凭证
+	// Name 了这个服务提供者的凭证
 	Name() string
 }

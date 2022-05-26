@@ -15,7 +15,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-// ColonRotateLog 代表会进行切割的日志文件存储
+// ColonRotateLog 会进行切割的日志文件存储
 type ColonRotateLog struct {
 	ColonLog
 

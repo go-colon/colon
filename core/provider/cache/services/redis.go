@@ -12,7 +12,7 @@ import (
 	redisv8 "github.com/go-redis/redis/v8"
 )
 
-// RedisCache 代表Redis缓存
+// RedisCache Redis缓存
 type RedisCache struct {
 	container core.Container
 	client    *redisv8.Client

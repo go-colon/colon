@@ -1,4 +1,4 @@
-package model
+package command
 
 import (
 	"fmt"
@@ -15,26 +15,26 @@ import (
 	"gorm.io/gen"
 )
 
-// 代表输出路径
+// 输出路径
 var output string
 
-// 代表数据库连接
+// 数据库连接
 var database string
 
 // InitModelCommand 获取model相关的命令
 func InitModelCommand() *cobra.Command {
-	modelGenCommand.Flags().StringVarP(&output, "output", "o", "", "模型输出地址")
+	modelGenCommand.Flags().StringVarP(&output, "output", "o", "", "输出地址")
 	modelGenCommand.MarkFlagRequired("output")
-	modelGenCommand.Flags().StringVarP(&database, "database", "d", "database.default", "模型连接的数据库")
+	modelGenCommand.Flags().StringVarP(&database, "database", "d", "database.default", "连接的数据库")
 
 	modelCommand.AddCommand(modelGenCommand)
 	return modelCommand
 }
 
-// modelCommand 模型相关的命令
+// modelCommand 模型相关命令
 var modelCommand = &cobra.Command{
 	Use:   "model",
-	Short: "数据库模型相关的命令",
+	Short: "模型相关命令",
 	RunE: func(c *cobra.Command, args []string) error {
 		if len(args) == 0 {
 			c.Help()

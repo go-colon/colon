@@ -12,7 +12,7 @@ import (
 	"net/url"
 )
 
-// IResponse代表返回方法
+// IResponse返回方法
 type IResponse interface {
 	// Json输出
 	IJson(obj interface{}) IResponse

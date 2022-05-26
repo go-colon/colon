@@ -207,7 +207,7 @@ var middlewareTmp string = `package {{.}}
 
 import "github.com/go-colon/colon/core/gin"
 
-// {{.|title}}Middleware 代表中间件函数
+// {{.|title}}Middleware 中间件函数
 func {{.|title}}Middleware() gin.HandlerFunc {
 	return func(context *gin.Context) {
 		context.Next()

@@ -2,7 +2,7 @@ package env
 
 // ColonEnv 是 Env 的具体实现
 type ColonTestingEnv struct {
-	folder string            // 代表.env所在的目录
+	folder string            // .env所在的目录
 	maps   map[string]string // 保存所有的环境变量
 }
 

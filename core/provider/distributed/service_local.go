@@ -12,7 +12,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-// LocalDistributedService 代表colon框架的App实现
+// LocalDistributedService colon框架的App实现
 type LocalDistributedService struct {
 	container core.Container // 服务容器
 }

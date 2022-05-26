@@ -9,7 +9,7 @@ import (
 
 const SSHKey = "colon:ssh"
 
-// SSHOption 代表初始化的时候的选项
+// SSHOption 初始化的时候的选项
 type SSHOption func(container core.Container, config *SSHConfig) error
 
 // SSHService 表示一个ssh服务

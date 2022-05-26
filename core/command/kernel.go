@@ -2,7 +2,6 @@ package command
 
 import (
 	"github.com/go-colon/colon/core/cobra"
-	"github.com/go-colon/colon/core/command/model"
 	"github.com/robfig/cron/v3"
 )
 
@@ -39,7 +38,7 @@ func AddKernelCommands(root *cobra.Command) {
 	// deploy
 	root.AddCommand(initDeployCommand())
 	// model
-	root.AddCommand(model.InitModelCommand())
+	root.AddCommand(InitModelCommand())
 }
 
 // InitCronCommands 初始化Cron相关的命令

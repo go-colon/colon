@@ -8,7 +8,7 @@ import (
 	"github.com/go-redis/redis/v8"
 )
 
-// ColonRedis 代表colon框架的redis实现
+// ColonRedis colon框架的redis实现
 type ColonRedis struct {
 	container core.Container           // 服务容器
 	clients   map[string]*redis.Client // key为uniqKey, value为redis.Client (连接池）
@@ -16,7 +16,7 @@ type ColonRedis struct {
 	lock *sync.RWMutex
 }
 
-// NewColonRedis 代表实例化Client
+// NewColonRedis 实例化Client
 func NewColonRedis(params ...interface{}) (interface{}, error) {
 	container := params[0].(core.Container)
 	clients := make(map[string]*redis.Client)

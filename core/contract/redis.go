@@ -9,7 +9,7 @@ import (
 
 const RedisKey = "colon:redis"
 
-// RedisOption 代表初始化的时候的选项
+// RedisOption 初始化的时候的选项
 type RedisOption func(container core.Container, config *RedisConfig) error
 
 // RedisService 表示一个redis服务

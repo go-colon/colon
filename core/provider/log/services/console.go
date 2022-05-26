@@ -7,7 +7,7 @@ import (
 	"github.com/go-colon/colon/core/contract"
 )
 
-// ColonConsoleLog 代表控制台输出
+// ColonConsoleLog 控制台输出
 type ColonConsoleLog struct {
 	ColonLog
 }

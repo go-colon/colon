@@ -15,7 +15,7 @@ import (
 	"gorm.io/gorm"
 )
 
-// ColonGorm 代表colon框架的orm实现
+// ColonGorm colon框架的orm实现
 type ColonGorm struct {
 	container core.Container      // 服务容器
 	dbs       map[string]*gorm.DB // key为dsn, value为gorm.DB（连接池）
@@ -23,7 +23,7 @@ type ColonGorm struct {
 	lock *sync.RWMutex
 }
 
-// NewColonGorm 代表实例化Gorm
+// NewColonGorm 实例化Gorm
 func NewColonGorm(params ...interface{}) (interface{}, error) {
 	container := params[0].(core.Container)
 	dbs := make(map[string]*gorm.DB)

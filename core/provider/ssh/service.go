@@ -9,7 +9,7 @@ import (
 	"golang.org/x/crypto/ssh"
 )
 
-// ColonSSH 代表colon框架的ssh实现
+// ColonSSH colon框架的ssh实现
 type ColonSSH struct {
 	container core.Container         // 服务容器
 	clients   map[string]*ssh.Client // key为uniqKey, value为ssh.Client(连接池）
@@ -17,7 +17,7 @@ type ColonSSH struct {
 	lock *sync.RWMutex
 }
 
-// NewColonSSH 代表实例化Client
+// NewColonSSH 实例化Client
 func NewColonSSH(params ...interface{}) (interface{}, error) {
 	container := params[0].(core.Container)
 	clients := make(map[string]*ssh.Client)

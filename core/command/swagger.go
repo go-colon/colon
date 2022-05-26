@@ -16,7 +16,7 @@ func initSwaggerCommand() *cobra.Command {
 
 var swaggerCommand = &cobra.Command{
 	Use:   "swagger",
-	Short: "swagger对应命令",
+	Short: "swagger 命令",
 	RunE: func(c *cobra.Command, args []string) error {
 		if len(args) == 0 {
 			c.Help()
@@ -28,7 +28,7 @@ var swaggerCommand = &cobra.Command{
 // swaggerGenCommand 生成具体的swagger文档
 var swaggerGenCommand = &cobra.Command{
 	Use:   "gen",
-	Short: "生成对应的swagger文件, contain swagger.yaml, doc.go",
+	Short: "生成swagger文件, contain swagger.yaml, doc.go",
 	Run: func(c *cobra.Command, args []string) {
 		container := c.GetContainer()
 		appService := container.MustMake(contract.AppKey).(contract.App)

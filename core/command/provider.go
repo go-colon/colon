@@ -28,7 +28,7 @@ func initProviderCommand() *cobra.Command {
 // providerCommand 二级命令
 var providerCommand = &cobra.Command{
 	Use:   "provider",
-	Short: "服务提供相关命令",
+	Short: "服务提供方命令",
 	RunE: func(c *cobra.Command, args []string) error {
 		if len(args) == 0 {
 			c.Help()
@@ -40,7 +40,7 @@ var providerCommand = &cobra.Command{
 // providerListCommand 列出容器内的所有服务
 var providerListCommand = &cobra.Command{
 	Use:   "list",
-	Short: "列出容器内的所有服务",
+	Short: "列出容器内的所有服务方",
 	RunE: func(c *cobra.Command, args []string) error {
 		container := c.GetContainer()
 		colonContainer := container.(*core.ColonContainer)

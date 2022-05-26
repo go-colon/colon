@@ -21,7 +21,7 @@ import (
 	"github.com/fsnotify/fsnotify"
 )
 
-// devConfig 代表调试模式的配置信息
+// devConfig 调试模式的配置信息
 type devConfig struct {
 	Port    string   // 调试模式最终监听的端口，默认为8070
 	Backend struct { // 后端调试模式配置
@@ -81,7 +81,7 @@ func initDevConfig(c core.Container) *devConfig {
 	return devConfig
 }
 
-// Proxy 代表serve启动的服务器代理
+// Proxy serve启动的服务器代理
 type Proxy struct {
 	devConfig   *devConfig // 配置文件
 	backendPid  int        // 当前的backend服务的pid
@@ -296,7 +296,7 @@ func (p *Proxy) monitorBackend() error {
 	for {
 		select {
 		case <-t.C:
-			// 计时器时间到了，代表之前有文件更新事件重置过计时器
+			// 计时器时间到了，之前有文件更新事件重置过计时器
 			// 即有文件更新
 			fmt.Println("...检测到文件更新，重启服务开始...")
 			fmt.Println("...期间请不要发送任何请求...")

@@ -1,20 +1,20 @@
 package demo
 
 import (
-	"github.com/go-colon/colon/core"
+	"github.com/fastopencn/colon/framework"
 )
 
 type DemoProvider struct {
-	core.ServiceProvider
+	framework.ServiceProvider
 
-	c core.Container
+	c framework.Container
 }
 
 func (sp *DemoProvider) Name() string {
 	return DemoKey
 }
 
-func (sp *DemoProvider) Register(c core.Container) core.NewInstance {
+func (sp *DemoProvider) Register(c framework.Container) framework.NewInstance {
 	return NewService
 }
 
@@ -22,11 +22,11 @@ func (sp *DemoProvider) IsDefer() bool {
 	return false
 }
 
-func (sp *DemoProvider) Params(c core.Container) []interface{} {
+func (sp *DemoProvider) Params(c framework.Container) []interface{} {
 	return []interface{}{sp.c}
 }
 
-func (sp *DemoProvider) Boot(c core.Container) error {
+func (sp *DemoProvider) Boot(c framework.Container) error {
 	sp.c = c
 	return nil
 }

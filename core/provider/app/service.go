@@ -10,7 +10,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-// ColonApp 代表colon框架的App实现
+// ColonApp colon框架的App实现
 type ColonApp struct {
 	container  core.Container // 服务容器
 	baseFolder string         // 基础路径
@@ -26,10 +26,10 @@ func (app ColonApp) AppID() string {
 
 // Version 实现版本
 func (app ColonApp) Version() string {
-	return "0.0.3"
+	return "0.0.1"
 }
 
-// BaseFolder 表示基础目录，可以代表开发场景的目录，也可以代表运行时候的目录
+// BaseFolder 表示基础目录，可以开发场景的目录，也可以运行时候的目录
 func (app ColonApp) BaseFolder() string {
 	if app.baseFolder != "" {
 		return app.baseFolder
@@ -150,7 +150,7 @@ func (app *ColonApp) LoadAppConfig(kv map[string]string) {
 	}
 }
 
-// AppFolder 代表app目录
+// AppFolder app目录
 func (app *ColonApp) AppFolder() string {
 	if val, ok := app.configMap["app_folder"]; ok {
 		return val
