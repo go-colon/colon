@@ -1,4 +1,4 @@
-package main
+package goroutine
 
 import (
 	"net/http/httptest"
@@ -6,15 +6,16 @@ import (
 	"time"
 
 	"github.com/go-colon/colon/core/gin"
+	"github.com/go-colon/colon/core/provider/log"
 	tests "github.com/go-colon/colon/test"
 )
 
 func TestSafeGo(t *testing.T) {
 	container := tests.InitBaseContainer()
-	container.Bind(&log.colonTestingLogProvider{})
+	container.Bind(&log.ColonTestingLogProvider{})
 
 	ctx, _ := gin.CreateTestContext(httptest.NewRecorder())
-	goroutine.SafeGo(ctx, func() {
+	SafeGo(ctx, func() {
 		time.Sleep(1 * time.Second)
 		return
 	})
@@ -22,7 +23,7 @@ func TestSafeGo(t *testing.T) {
 	time.Sleep(2 * time.Second)
 	t.Log("safe go main end")
 
-	goroutine.SafeGo(ctx, func() {
+	SafeGo(ctx, func() {
 		time.Sleep(1 * time.Second)
 		panic("safe go test panic")
 	})

@@ -28,7 +28,7 @@ var appDaemon = false
 // initAppCommand 初始化app命令和其子命令
 func initAppCommand() *cobra.Command {
 	appStartCommand.Flags().BoolVarP(&appDaemon, "daemon", "d", false, "start app daemon")
-	appStartCommand.Flags().StringVarP(&appAddress, "address", "a", "8888", "app启动的地址，默认:8888")
+	appStartCommand.Flags().StringVarP(&appAddress, "address", "a", ":8888", "app启动的地址，默认:8888")
 
 	appCommand.AddCommand(appStartCommand)
 	appCommand.AddCommand(appRestartCommand)
