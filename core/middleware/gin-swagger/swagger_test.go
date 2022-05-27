@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 
-	_ "github.com/swaggo/gin-swagger/example/basic/doc"
+	_ "github.com/swaggo/gin-swagger/example/basic/docs"
 )
 
 func TestWrapHandler(t *testing.T) {
@@ -32,7 +32,7 @@ func TestWrapCustomHandler(t *testing.T) {
 	w1 := performRequest("GET", "/index.html", router)
 	assert.Equal(t, 200, w1.Code)
 
-	w2 := performRequest("GET", "/doc.json", router)
+	w2 := performRequest("GET", "/docs.json", router)
 	assert.Equal(t, 200, w2.Code)
 
 	w3 := performRequest("GET", "/favicon-16x16.png", router)
@@ -53,7 +53,7 @@ func TestDisablingWrapHandler(t *testing.T) {
 	w1 := performRequest("GET", "/simple/index.html", router)
 	assert.Equal(t, 200, w1.Code)
 
-	w2 := performRequest("GET", "/simple/doc.json", router)
+	w2 := performRequest("GET", "/simple/docs.json", router)
 	assert.Equal(t, 200, w2.Code)
 
 	w3 := performRequest("GET", "/simple/favicon-16x16.png", router)
@@ -69,7 +69,7 @@ func TestDisablingWrapHandler(t *testing.T) {
 	w11 := performRequest("GET", "/disabling/index.html", router)
 	assert.Equal(t, 404, w11.Code)
 
-	w22 := performRequest("GET", "/disabling/doc.json", router)
+	w22 := performRequest("GET", "/disabling/docs.json", router)
 	assert.Equal(t, 404, w22.Code)
 
 	w33 := performRequest("GET", "/disabling/favicon-16x16.png", router)
@@ -118,7 +118,7 @@ func TestWithGzipMiddleware(t *testing.T) {
 	assert.Equal(t, 200, w3.Code)
 	assert.Equal(t, w3.Header()["Content-Type"][0], "application/javascript")
 
-	w4 := performRequest("GET", "/doc.json", router)
+	w4 := performRequest("GET", "/docs.json", router)
 	assert.Equal(t, 200, w4.Code)
 	assert.Equal(t, w4.Header()["Content-Type"][0], "application/json")
 }

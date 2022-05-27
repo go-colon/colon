@@ -28,7 +28,7 @@ var swaggerCommand = &cobra.Command{
 // swaggerGenCommand 生成具体的swagger文档
 var swaggerGenCommand = &cobra.Command{
 	Use:   "gen",
-	Short: "生成swagger文件, contain swagger.yaml, doc.go",
+	Short: "生成swagger文件, contain swagger.yaml, docs.go",
 	Run: func(c *cobra.Command, args []string) {
 		container := c.GetContainer()
 		appService := container.MustMake(contract.AppKey).(contract.App)

@@ -15,7 +15,7 @@ import (
 
 // Config stores ginSwagger configuration variables.
 type Config struct {
-	//The url pointing to API definition (normally swagger.json or swagger.yaml). Default is `doc.json`.
+	//The url pointing to API definition (normally swagger.json or swagger.yaml). Default is `docs.json`.
 	URL         string
 	DeepLinking bool
 }
@@ -37,7 +37,7 @@ func DeepLinking(deepLinking bool) func(c *Config) {
 // WrapHandler wraps `http.Handler` into `gin.HandlerFunc`.
 func WrapHandler(h *webdav.Handler, confs ...func(c *Config)) gin.HandlerFunc {
 	defaultConfig := &Config{
-		URL:         "doc.json",
+		URL:         "docs.json",
 		DeepLinking: true,
 	}
 
@@ -54,7 +54,7 @@ func CustomWrapHandler(config *Config, h *webdav.Handler) gin.HandlerFunc {
 	t := template.New("swagger_index.html")
 	index, _ := t.Parse(swagger_index_templ)
 
-	var rexp = regexp.MustCompile(`(.*)(index\.html|doc\.json|favicon-16x16\.png|favicon-32x32\.png|/oauth2-redirect\.html|swagger-ui\.css|swagger-ui\.css\.map|swagger-ui\.js|swagger-ui\.js\.map|swagger-ui-bundle\.js|swagger-ui-bundle\.js\.map|swagger-ui-standalone-preset\.js|swagger-ui-standalone-preset\.js\.map)[\?|.]*`)
+	var rexp = regexp.MustCompile(`(.*)(index\.html|docs\.json|favicon-16x16\.png|favicon-32x32\.png|/oauth2-redirect\.html|swagger-ui\.css|swagger-ui\.css\.map|swagger-ui\.js|swagger-ui\.js\.map|swagger-ui-bundle\.js|swagger-ui-bundle\.js\.map|swagger-ui-standalone-preset\.js|swagger-ui-standalone-preset\.js\.map)[\?|.]*`)
 
 	return func(c *gin.Context) {
 
@@ -89,7 +89,7 @@ func CustomWrapHandler(config *Config, h *webdav.Handler) gin.HandlerFunc {
 				URL:         config.URL,
 				DeepLinking: config.DeepLinking,
 			})
-		case "doc.json":
+		case "docs.json":
 			doc, err := swag.ReadDoc()
 			if err != nil {
 				panic(err)
