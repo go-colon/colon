@@ -1,10 +1,10 @@
 // Package http API.
-// @title Colon
+// @title colon
 // @version 1.1
-// @description Colon测试
+// @description colon测试
 // @termsOfService https://github.com/swaggo/swag
 
-// @contact.name fastopencn1
+// @contact.name fastopencn
 // @contact.email fastopencn
 
 // @license.name Apache 2.0
@@ -23,6 +23,4 @@
 
 package http
 
-import (
-	_ "github.com/go-colon/colon/app/http/swagger"
-)
+//_ "github.com/go-colon/colon/app/http/swagger"

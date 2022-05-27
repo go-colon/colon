@@ -19,7 +19,7 @@ var doc = `{
         "title": "{{.Title}}",
         "termsOfService": "https://github.com/swaggo/swag",
         "contact": {
-            "name": "fastopencn1",
+            "name": "fastopencn",
             "email": "fastopencn"
         },
         "license": {
@@ -307,8 +307,8 @@ var SwaggerInfo = swaggerInfo{
 	Host:        "",
 	BasePath:    "/",
 	Schemes:     []string{},
-	Title:       "Colon",
-	Description: "Colon测试",
+	Title:       "colon",
+	Description: "colon测试",
 }
 
 type s struct{}

@@ -1,11 +1,11 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Colon测试",
-        "title": "Colon",
+        "description": "colon测试",
+        "title": "colon",
         "termsOfService": "https://github.com/swaggo/swag",
         "contact": {
-            "name": "fastopencn1",
+            "name": "fastopencn",
             "email": "fastopencn"
         },
         "license": {

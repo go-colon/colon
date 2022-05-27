@@ -33,13 +33,13 @@ definitions:
 info:
   contact:
     email: fastopencn
-    name: fastopencn1
-  description: Colon测试
+    name: fastopencn
+  description: colon测试
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://github.com/swaggo/swag
-  title: Colon
+  title: colon
   version: "1.1"
 paths:
   /demo/demo:

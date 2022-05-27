@@ -11,11 +11,11 @@ func RunCommand(container core.Container) error {
 	// 根Command
 	var rootCmd = &cobra.Command{
 		// 定义根命令的关键字
-		Use: "Colon",
+		Use: "colon",
 		// 简短介绍
-		Short: "Colon 命令",
+		Short: "colon 命令",
 		// 根命令的详细介绍
-		Long: "Colon 框架提供的命令行工具，使用这个命令行工具能很方便执行框架自带命令，也能很方便编写业务命令",
+		Long: "colon 框架提供的命令行工具，使用这个命令行工具能很方便执行框架自带命令，也能很方便编写业务命令",
 		// 根命令的执行函数
 		RunE: func(cmd *cobra.Command, args []string) error {
 			cmd.InitDefaultHelpFlag()

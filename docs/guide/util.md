@@ -6,7 +6,8 @@ colon提供了一些辅助函数来帮助你更好的进行开发。
 
 ### SafeGo
 
-SafeGo 这个函数，提供了一种goroutine安全的函数调用方式。主要适用于业务中需要进行开启异步goroutine业务逻辑调用的场景。
+SafeGo 这个函数，提供了一种goroutine安全的函数调用方式。
+主要适用于业务中需要进行开启异步goroutine业务逻辑调用的场景。
 
 ```
 // SafeGo 进行安全的goroutine调用

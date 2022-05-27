@@ -19,7 +19,7 @@ Available Commands:
 Flags:
   -h, --help   help for swagger
 
-Use "Colon swagger [command] --help" for more information about a command.
+Use "colon swagger [command] --help" for more information about a command.
 
 ```
 
@@ -72,6 +72,7 @@ swagger 注释的格式和关键词可以参考：[swaggo](https://github.com/sw
 在目录 `app/http/swagger/` 下自动生成swagger相关文件。
 
 ## 服务
+待实现
 
 可以使用命令 `./colon swagger serve` 启动当前应用的 swagger ui 服务。
 

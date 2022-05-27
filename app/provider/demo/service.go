@@ -1,13 +1,13 @@
 package demo
 
-import "github.com/fastopencn/colon/framework"
+import "github.com/go-colon/colon/core"
 
 type Service struct {
-	container framework.Container
+	container core.Container
 }
 
 func NewService(params ...interface{}) (interface{}, error) {
-	container := params[0].(framework.Container)
+	container := params[0].(core.Container)
 	return &Service{container: container}, nil
 }
 
