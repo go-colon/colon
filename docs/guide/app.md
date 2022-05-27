@@ -9,7 +9,7 @@ package http
 
 import (
 	"github.com/go-colon/colon/app/http/module/demo"
-	"github.com/go-colon/colon/framework/gin"
+	"github.com/go-colon/colon/core/gin"
 )
 
 func Routes(r *gin.Engine) {

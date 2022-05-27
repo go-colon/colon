@@ -52,8 +52,8 @@ package command
 import (
         "fmt"
 
-        "github.com/go-colon/colon/framework/cobra"
-        "github.com/go-colon/colon/framework/command/util"
+        "github.com/go-colon/colon/core/cobra"
+        "github.com/go-colon/colon/core/command/util"
 )
 
 var TestCommand = &cobra.Command{

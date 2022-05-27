@@ -7,7 +7,7 @@ package main
 
 import (
 	"github.com/go-colon/colon/core/gin"
-	"github.com/go-colon/colon/framework/gin/ginS"
+	"github.com/go-colon/colon/core/gin/ginS"
 )
 
 func main() {

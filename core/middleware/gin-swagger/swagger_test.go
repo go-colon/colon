@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/go-colon/colon/framework/gin"
+	"github.com/go-colon/colon/core/gin"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/swaggo/gin-swagger/swaggerFiles"

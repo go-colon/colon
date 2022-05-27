@@ -463,7 +463,7 @@ func (engine *Engine) RunUnix(file string) (err error) {
 
 	if engine.isUnsafeTrustedProxies() {
 		debugPrint("[WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.\n" +
-			"Please check https://pkg.go.dev/github.com/go-colon/colon/framework/gin#readme-don-t-trust-all-proxies for details.")
+			"Please check https://pkg.go.dev/github.com/go-colon/colon/core/gin#readme-don-t-trust-all-proxies for details.")
 	}
 
 	listener, err := net.Listen("unix", file)

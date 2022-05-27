@@ -15,7 +15,7 @@
 package main
 
 import (
-	"github.com/go-colon/colon/framework/gin"
+	"github.com/go-colon/colon/core/gin"
 )
 
 func main() {
