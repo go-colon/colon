@@ -25,6 +25,9 @@ type Container interface {
 	MakeNew(key string, params []interface{}) (interface{}, error)
 }
 
+//限制必须实现Container interface
+var _ Container = (*ColonContainer)(nil)
+
 // ColonContainer 是服务容器的具体实现
 type ColonContainer struct {
 	Container
