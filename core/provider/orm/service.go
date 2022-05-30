@@ -10,8 +10,6 @@ import (
 	"gorm.io/driver/clickhouse"
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
-	"gorm.io/driver/sqlite"
-	"gorm.io/driver/sqlserver"
 	"gorm.io/gorm"
 )
 
@@ -86,12 +84,9 @@ func (app *ColonGorm) GetDB(option ...contract.DBOption) (*gorm.DB, error) {
 		db, err = gorm.Open(mysql.Open(config.Dsn), config)
 	case "postgres":
 		db, err = gorm.Open(postgres.Open(config.Dsn), config)
-	case "sqlite":
-		db, err = gorm.Open(sqlite.Open(config.Dsn), config)
-	case "sqlserver":
-		db, err = gorm.Open(sqlserver.Open(config.Dsn), config)
 	case "clickhouse":
 		db, err = gorm.Open(clickhouse.Open(config.Dsn), config)
+
 	}
 
 	// 设置对应的连接池配置
